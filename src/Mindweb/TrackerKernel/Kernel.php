@@ -17,8 +17,9 @@ interface Kernel
 
     /**
      * @param Subscriber\Loader $loader
+     * @param Configuration\Cache $cache
      */
-    public function registerSubscribers(Subscriber\Loader $loader);
+    public function registerSubscribers(Subscriber\Loader $loader, Configuration\Cache $cache);
 
     public function registerEndPoint();
 
