@@ -1,11 +1,13 @@
 <?php
 namespace Mindweb\TrackerKernel\Subscriber;
 
-use Mindweb\TrackerKernel\Configuration\Config;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 interface Loader
 {
-    public function __construct(Config $config);
-
-    public function load();
+    /**
+     * @param EventDispatcherInterface $dispatcher
+     * @param array $subscribers
+     */
+    public function load(EventDispatcherInterface $dispatcher, array $subscribers);
 } 
